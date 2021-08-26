@@ -19,6 +19,6 @@ With the new git switch and git restore commands, that would be:
 git switch master
 git restore --source dev -- app.js
 `
-(source)[https://stackoverflow.com/q/2364147/16426739]
+[source](https://stackoverflow.com/q/2364147/16426739)
 
 
