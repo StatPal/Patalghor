@@ -17,4 +17,4 @@ Task List:
 
 
 
-<a name="myfootnote1">1</a>: This `or` is an inclusive or.
+<sup name="myfootnote1">1</sup>: This `or` is an inclusive or.
