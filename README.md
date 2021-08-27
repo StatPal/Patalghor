@@ -4,16 +4,15 @@ Everything you forget often - about computers - which are mostly needed in a pro
 
 Beginners things are indicated by \*\*\*, Intermediate by \*\*, advanced by \*
 
-[git](git/git.md)
+[git](git/git.md)|[R](R/R.md)|[python](python/python.md)|[Linux](Linux/Linux.md)
 
 
 
 Task List:
 - [x] git
 - [ ] R
-- [ ] C
 - [ ] python
-- [ ] Linux
+- [x] Linux
 
 
 
