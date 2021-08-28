@@ -22,7 +22,7 @@ find . -name '*<pattern-of-the-files>' -exec sed -i -e 's/<search-pattern>/<repl
 ```
 
 
-### Batch copy rename:
+## Batch copy rename:
 ```
 lis=($(ls <pattern>))
 for file in "${lis[@]}"
