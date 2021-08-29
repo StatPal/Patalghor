@@ -22,7 +22,7 @@ The simplest way to compile a package (with `make`) is:
 I will show how to install nano-text-editor (latest stable version, to be installed **somewhere in your $HOME directory, not system-wise**)
 This is **important** if you want to install something in HPC **without root access**
 
-```
+```bash
 ## Goto home directory
 cd
 
@@ -66,13 +66,13 @@ However, this is not always convenient.
 **Here, we would use a trick to open it (this version) by default**
 **tl;dr**
 Add this line to your ~/.bashrc or ~/.zshrc or equivalent:
-```
+```bash
 export PATH=$HOME/install_dir/install_sub/bin:$PATH
 ```
 
 Details:
 We would export(*prepend*) this path of binary file (the `bin` location) to the system `PATH` so that when you just type `nano`, the nano is opened from this new path. For that, type this command in your terminal (each time you log in). 
-```
+```bash
 export PATH=$HOME/install_dir/install_sub/bin:$PATH
 ```
 To refrain yourself from doing this all the sessions, just add this line to the ~/.bashrc or ~/.zshrc or equivalent.
@@ -89,7 +89,7 @@ I have meant both unzip and untar by 'extract'.
  - `tar` is the process of making a directory into one file.
 Both are compressed into one command here. 
 If you want to split the commands, it would be something like: 
-```
+```bash
 gunzip nano-5.8.tar.gz 		## To un-gzip the file.
 
 tar -xvf nano-5.8.tar 		## To unter the 'tar-file' into a proper folder/directory
@@ -109,14 +109,14 @@ For statisticians, you might come across many large `*.csv` data/other files. It
 
 
 ### Remove old installed packages, leave 1:
-```
+```bash
 sudo paccache -rvk3
 ```
 
 
 ### Clean AUR built packages:
 
-```
+```bash
 #Remove orphaned libraries
 #pamac remove --orphans
 
@@ -130,7 +130,7 @@ pamac clean --build-files
 
 ### Clean temporary build files (in your home directory)
 **From https://forum.manjaro.org/t/cleaning-up-and-freeing-disk-space/6703/31**
-```
+```bash
 rm -rf ~/{.bundle,.cargo,.cmake,.dotnet,.electron,.electron-gyp,.gem,.gradle,.lazarus,.node-gyp,.npm,.nuget,.nvm,.racket,.rustup,.stack,.yarn} || true
 rm -rf ~/.cache/{electron,electron-builder,go-build,node-gyp,pip,yarn} || true
 sudo rm -rf ~/go || true
@@ -142,12 +142,12 @@ sudo rm -rf ~/go || true
 
 ### Snap:
 If you use snap, there is a high cance of creating huuuge files. One trck is to remove old versions and retain only last two:
-```
+```bash
 sudo snap set system refresh.retain=2
 ```
 
 To clean cache of snap
-```
+```bash
 sudo rm /var/lib/snapd/cache/*
 ```
 

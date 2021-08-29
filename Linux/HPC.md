@@ -9,7 +9,7 @@ To know more, see https://slurm.schedmd.com/overview.html
 The HPC cluster nodes usually run some kind of Unix-like OS. You have to use secure shell(**ssh**) to log-in (unfortunately no GUI type desktop manager to log-in.) **ssh** is available in Linux, Mac(use terminal); Windows(open Powershell). For old Windows, use *Putty ssh client*, or use **Rstudio terminal pane**(Rstudio users).
 
 **To log-in, you have to something like:**
-```
+```bash
 ssh YournameID@cluster.its.iastate.edu
 ```
 Then you have to give your current Google Authenticator number (You have to set-up it for the first time) and your password. 
@@ -19,7 +19,7 @@ After successful login, you'll see something like: `[YournameID@cluster ~]$` by 
 
 ###### Graphical outputs: 
 By default, graphical outputs are not coming to your computer. To get graphical outputs(in interactive mode, see later) you can actually do something like: 
-```
+```bash
 ssh -Y YournameID@cluster.its.iastate.edu
 ```
 (i.e., adding a -Y flag.) However, the connection gets relatively slow. 
@@ -35,12 +35,12 @@ In `R`, if you do nothing, it will automatically print all images stacked in a p
 (secure copy)`scp` is basically like linux command `cp` (copy). The basic syntax of `cp` is:
 `cp <path/if/needed/first_file_name> <path/if/needed/target_file_name>`
 or **if you are copying to a different directory with the same name:**
-```
+```bash
 cp <path/if/needed/first_file_name> <target/directory/path>
 ```
 
 Similarly, **the scp in your case would be:**
-```
+```bash
 scp <file> YournameID@condodtn.its.iastate.edu:/home/YournameID/needed/path/target_filename 
 ```
 If you want to put the file in home diretory, you can just do something like: `scp <file> YournameID@condodtn.its.iastate.edu:`
@@ -63,7 +63,7 @@ To run a job after logging in (for interactive runs, see later), usually, you ha
 
 
 An example script:
-```
+```bash
 #!/bin/bash
 
 # Copy/paste this job script into a text file and submit with the command:
@@ -90,7 +90,9 @@ Rscript --no-save  filename.R
 To see all running or pending jobs:
 `squeue`
 To see the jobs corresponding to from your account:
-`squeue | grep <your name/id>`
+```bash
+squeue | grep <your name/id>
+```
 
 
 

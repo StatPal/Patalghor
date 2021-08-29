@@ -5,31 +5,31 @@
 
 
 To get the diff for the Staged file (after git add . or equaivalent)
-```
+```bash
 git diff --staged
 ```
 
 
 
 #### diff among branches:
-```
+```bash
 git diff branch_1...branch_2
 ```
 
 Get differences of two specific files:
-```
+```bash
 git diff branch_1..branch_2 -- path/to/myfile
 # or
 git diff branch_1 branch_2 -- path/to/myfile
 ```
 
 Only to know which files differ:
-```
+```bash
 git diff --name-only branch_1...branch_2
 ```
 
 Compare checked out branch to branch_2
-```
+```bash
 git diff ..branch_2
 ```
 [source](https://stackoverflow.com/q/9834689/16426739)
@@ -41,17 +41,17 @@ git diff ..branch_2
 ### Checkout one file from another branch
 
 syntax:
-```
+```bash
 git checkout branch_name -- file_name
 ```
 e.g.:
-```
+```bash
 git checkout master               # first get back to master
 git checkout dev -- app.js	  # then copy the version of app.js from branch "dev"
 ```
 Or Update August 2019, Git 2.23
 With the new git switch and git restore commands, that would be:
-```
+```bash
 git switch master
 git restore --source dev -- app.js
 ```

@@ -4,26 +4,26 @@
 ## Find command:
 
 #### Newer than Sep 10, Older than Sep 13
-```
+```bash
 find . -type f -newermt "Sep 10" \! -newermt "Sep 13" -print
 # or
 # find . -type f -newermt "Sep 10" \! -newermt "Sep 13" -exec echo {} \;
 ```
 #### To delete those:
-```
+```bash
 find . -type f -newermt "Sep 10" \! -newermt "Sep 13" -delete
 # or
 # find . -type f -newermt "Sep 10" \! -newermt "Sep 13" -exec rm {} \;
 ```
 
 ### If you want to search and replace all the occurances:
-```
+```bash
 find . -name '*<pattern-of-the-files>' -exec sed -i -e 's/<search-pattern>/<replace-pattern>/g' {} \;
 ```
 
 
 ## Batch copy rename:
-```
+```bash
 lis=($(ls <pattern>))
 for file in "${lis[@]}"
 do
