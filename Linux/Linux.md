@@ -1,4 +1,4 @@
-## Linux commands:
+# Linux commands:
 
 
 ## Find command:
