@@ -110,7 +110,7 @@ For statisticians, you might come across many large `*.csv` data/other files. It
 
 ### Remove old installed packages, leave 1:
 ```bash
-sudo paccache -rvk3
+sudo paccache -rvk1
 ```
 
 
