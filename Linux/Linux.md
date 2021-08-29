@@ -33,3 +33,11 @@ done
 ```
 
 
+#### Tricks:
+
+##### nano tricks: (Let's admit, nano is a good enough editor to do short jobs)
+
+To insert some output from some command-ine output,
+ - Do `^R` (To read 'something')
+ - Do `^X` (To execute commnd)
+ - Type command to execute, like `date`, then enter.
