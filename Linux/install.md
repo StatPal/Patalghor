@@ -146,6 +146,8 @@ If you use snap, there is a high cance of creating huuuge files. One trck is to 
 sudo snap set system refresh.retain=2
 ```
 
-
-
+To clean cache of snap
+```
+sudo rm /var/lib/snapd/cache/*
+```
 
