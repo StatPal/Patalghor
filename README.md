@@ -25,19 +25,21 @@ Everything you forget often - about computers - which are mostly needed in a pro
 - [ ] python
 - [x] Linux
 
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-Beginners things are indicated by \*\*\*, Intermediate by \*\*, advanced by \*
 
+### TODO
+- Indicate Beginner-things by \*\*\*, Intermediate by \*\*, Advanced by \*
+- Include contributing.md.
 
 ### Contributing
 
 Contributions are always welcome!
-
 See `contributing.md` for ways to get started.
-
 Please adhere to this project's `code of conduct`.
 
 
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+
 
 <sup name="myfootnote1">1</sup> This `or` is an inclusive or.
+
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
