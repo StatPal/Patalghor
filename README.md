@@ -5,7 +5,7 @@ Everything you forget often - about computers - which are mostly needed in a pro
 
 Beginners things are indicated by \*\*\*, Intermediate by \*\*, advanced by \*
 
-[git](git/git.md) | [R](R/R.md) | [python](python/python.md) | [Linux-main](Linux/Linux.md) | [Linux-install](Linux/install.md) | [Clean](Linux/clean.md)
+[git](git/git.md) | [R](R/R.md) | [python](python/python.md) | [Linux-main](Linux/Linux.md) | [Linux-install](Linux/install.md) | [Linux-clean](Linux/clean.md)
 
 
 
