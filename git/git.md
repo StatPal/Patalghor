@@ -17,7 +17,7 @@ git pull
 ```bash 
 git add <filename>
 ```
--To commit changes: 
+- To commit changes: 
 ```bash
 git commit -m "message"
 ```
@@ -26,19 +26,30 @@ git commit -m "message"
 git push
 ```
 
+To check the current changes after adding a file etc, use:
+```bash
+git status
+```
+To see the exact differences in the file:
+```bash
+git diff
+```
+
 ## Terminology:
  - *local* 
  - *remote repo* -- If you store your project into some online repository (like github/gitlab/bitbucket) privately or publicly - this is where you store it. 
  - *branch* -- Your git repo(sitory) can have morre than one branch - maybe one for final product, maybe one for development type 1, one for development type 2 etc. You can copy/merge one branche('s) file to another. So you can experiment in *dev branch*, then merge it to the *master* branch.
- 
+ - *commit* (as verb) -- 'The action of storing a new snapshot of the project’s state in the Git history, by creating a new commit representing the current state of the index and advancing HEAD to point at the new commit.'
 
 
 
 
 
 
+## Specific commands needed:
 
-### Git diff:
+
+#### Git diff:
 
 
 To get the diff for the Staged file (after git add . or equaivalent)
@@ -75,7 +86,7 @@ git diff ..branch_2
 
 
 
-### Checkout one file from another branch
+#### Checkout one file from another branch
 
 syntax:
 ```bash
