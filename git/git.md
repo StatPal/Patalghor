@@ -7,8 +7,30 @@ Basically, you don't have to rename your poject as "project(copy)(new)final-2.te
 Moreover, many people can add soemthing into a project in an easy way. 
 
 
-## Main workflow of git:
+## Main commands of git:
 
+#### Configure/Setup (one-time)
+```bash
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR EMAIL ADDRESS"
+git config --global push.default simple
+```
+For authentication, it is easiest to use `ssh` or `secure shell` [See this](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+
+
+To initialize a git repo(sitory), you may do:
+```bash
+git init <directory>
+```
+
+To clone some existing repo in say `github`, you can do something like:
+```bash
+git clone git@github.com:<username>/<repo>.git
+```
+
+
+
+#### Main workflow of git:
 - To update your local repository 
 ```bash 
 git pull
@@ -36,11 +58,13 @@ git diff
 ```
 
 ## Terminology:
- - *local* 
- - *remote repo* -- If you store your project into some online repository (like github/gitlab/bitbucket) privately or publicly - this is where you store it. 
+ - *local repository* -- repository in your local machine.
+ - *remote/upstream repo(sitory)* -- If you store your project into some online repository (like github/gitlab/bitbucket) privately or publicly - this is where you store it. 
  - *branch* -- Your git repo(sitory) can have morre than one branch - maybe one for final product, maybe one for development type 1, one for development type 2 etc. You can copy/merge one branche('s) file to another. So you can experiment in *dev branch*, then merge it to the *master* branch.
  - *commit* (as verb) -- 'The action of storing a new snapshot of the project’s state in the Git history, by creating a new commit representing the current state of the index and advancing HEAD to point at the new commit.'
-
+ - *Tracked and untracked files* - files either in the index cache or not yet added to it
+ - *Cache* - a space intended to temporarily store uncommitted changes
+ - *Stash* - another cache, that acts as a stack, where changes can be stored without committing them
 
 
 
