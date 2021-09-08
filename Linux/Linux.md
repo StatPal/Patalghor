@@ -32,6 +32,12 @@ do
 done
 ```
 
+#### Remove leading whitespaces:
+```bash
+sed -e 's/^[ \t]*//'
+```
+[source](https://stackoverflow.com/questions/369758/how-to-trim-whitespace-from-a-bash-variable)
+
 
 #### Tricks:
 
