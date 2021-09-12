@@ -47,3 +47,12 @@ To insert some output from some command-ine output,
  - Do `^R` (To read 'something')
  - Do `^X` (To execute commnd)
  - Type command to execute, like `date`, then enter.
+
+
+To comment many lines at once:
+ - Select the lines using Shift+arrow keys/mouse
+ - `Esc + 3`
+ - https://unix.stackexchange.com/questions/460474/how-to-comment-multiple-lines-in-nano-at-once
+
+ Similarly, to indent, you have to use `Alt+}` and other things,  https://unix.stackexchange.com/a/639082/481190
+ and https://stackoverflow.com/questions/7170103/keyboard-shortcut-to-comment-a-line-in-nano
