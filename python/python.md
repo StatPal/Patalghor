@@ -1,6 +1,6 @@
-# Python (with conda) and plot etc:
+# Python virtual environment (with conda):
 
-- [Python (with conda) and plot etc:](#python--with-conda--and-plot-etc-)
+- [Python (with conda):](#python--with-conda--)
   * [**tl;dr** Virtual environment(v.env.) with conda:](#--tl-dr---virtual-environment-venv--with-conda-)
   * [Details:](#details-)
     + [Creation:](#creation-)
