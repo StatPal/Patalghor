@@ -32,6 +32,14 @@ Everything you forget often - about computers - which are mostly needed in a pro
 - Indicate Beginner-things by \*\*\*, Intermediate by \*\*, Advanced by \*
 - Include contributing.md.
 
+
+Some other important links:
+
+https://www.linux.com/training-tutorials/?filter_by=popular
+
+https://guides.github.com/features/mastering-markdown/
+
+
 ### Contributing
 
 Contributions are always welcome!
