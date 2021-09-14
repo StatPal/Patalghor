@@ -15,7 +15,7 @@ Everything you forget often - about computers - which are mostly needed in a pro
 ### 🔗 Links to the specific readme files:
  - [git](git/git.md)
  - [R](R/R.md)
- - [python](python/python.md)
+ - [python-virtual environment](python/python.md) | [keras](python/keras.md)
  - [Linux-HPC](Linux/HPC.md)
  - [Linux-main](Linux/Linux.md) | [Linux-install](Linux/install.md) | [Linux-clean](Linux/clean.md)
 
@@ -24,7 +24,7 @@ Everything you forget often - about computers - which are mostly needed in a pro
 ### Task List:
 - [x] git
 - [ ] R
-- [ ] python
+- [x] python
 - [x] Linux
 
 
