@@ -34,3 +34,6 @@ ip addr show | grep "inet "
 
 However, if the remote computer is not in the same network, you need more works. 
 
+
+[source](https://opensource.com/article/20/9/ssh)
+
