@@ -1,5 +1,25 @@
 # Text editors
 
+- [Beginners](#beginners)
+- [Intermediate advanced](#intermediate-advanced)
+- [Specific Editors](#specific-editors)
+  * [gedit](#gedit)
+  * [nano](#nano)
+      - [Basic shortcuts or keybindings](#basic-shortcuts-or-keybindings)
+        * [File access](#file-access)
+        * [Search and replace](#search-and-replace)
+        * [Cut 'n paste](#cut-n-paste)
+        * [Undo Redo](#undo-redo)
+        * [Navigation:](#navigation)
+        * [Delete](#delete)
+        * [Indenting, commenting etc](#indenting-commenting-etc)
+        * [File buffers, if you open more than one file at one - they are basically different buffers](#file-buffers-if-you-open-more-than-one-file-at-one-they-are-basically-different-buffers)
+        * [More (intermediate user)](#more-intermediate-user)
+        * [Create Keybinds (intermediate user)](#create-keybinds-intermediate-user)
+      - [Adding colors](#adding-colors)
+
+
+
 ## Beginners
 - For beginners with **Graphical User Interface(GUI)**, I would suggest to work with [gedit](https://wiki.gnome.org/Apps/Gedit)/[kate](https://kate-editor.org/) first. (For common linux distributions, one of these two are there depending on our desktop environment.) With these editors, you can install many plug-ins, such as word-completion, for better workflow. Another useful GUI based editor would be [notepad++](https://notepad-plus-plus.org/) (windows version) with linux version - **notepadqq**. 
 - To work with **command line tool**, you can work with [nano](https://nano-editor.org/) or [micro](https://micro-editor.github.io/) editor. I would suggest to get the basics of `nano` first, as it is available in most linux machines. The problems with *nano* is that it has little bit non-conventional keybindings in older versions, such as `ctrl+x` for exit `ctrl+g` for help, etc. Many of these are not-so-obvious at first. *micro* have somehow better keyinding - but it might not be available in many old machines, espceially if you are not admin of the machine.
@@ -54,7 +74,7 @@ nano <file1> <file2>
 ```
 You can then go from one file to another using the shortcuts/keybinds `Alt+rightarrow`or `Alt+leftarrow`. 
 
-Basic shortcuts/keybindings are as follows: 
+##### Basic shortcuts or keybindings 
 
 (<sub>**Ctrl** is denoted as **`^`** which is equivalent to double Esc key, *Meta* (usually **Alt**, but can be Esc/Cmd key also) is denoted as **`M`**, Shift is denoted as `Sh`.</sub>
 
