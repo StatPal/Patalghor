@@ -39,6 +39,7 @@ Gedit is a 'what I see is what I type' editor. Some plug-ins I use frequently ar
 - Spell Checker
 - Word Completion. 
 
+<hr style="border:0.1px solid gray"> </hr>
 
 ### nano
 nano is a simple non-modal editor. 
@@ -50,35 +51,53 @@ To open multiple files, write
 ```bash
 nano <file1> <file2>
 ```
+You can then go from one file to another using the shortcuts/keybinds `Alt+rightarrow`or `Alt+leftarrow`. 
 
-Basic shortcuts/keybindings are: 
-(Ctrl is denoted as `^`, Meta (Alt) is denoted as `M`, Shift is denoted as `Sh`.
+Basic shortcuts/keybindings are as follows: 
+
+(**Ctrl** is denoted as **`^`** which is equivalent to double Esc key, *Meta* (usually **Alt**, but can be Esc/Cmd key also) is denoted as **`M`**, Shift is denoted as `Sh`.
+
 `Some key + another key` means you have to hold one key and then press another. 
+
 Type `Ctrl+G` to get shortcuts and alternative shortcuts in your machine.
 Without paranthesis means explanation in simple usual terms.
 New correspondos to these are also added in new versions)
+
+###### File access
 ```
-## File access
 ^G  Ctrl+G    Help
 ^X  Ctrl+X    Exit
-^O  (^S new)  Write/Save
-^R            Inser another file in current buffer (One have to type the new file name after ^R)
+^O            Write/Save
+^S  new       Save without prompting 
+^R            Insert another file in current buffer (One have to type the new file name after ^R)
+```
+`Ctrl+C` is cancel in most of the cases, i.e., you did  to open a file
 
-## Search and replace
-^W (F6)       Find (in forward direction) [i.e., ^W, then type what you want to find, then enter]
+###### Search and replace
+```
+^W (F6)       Where is: Find (in forward direction) [i.e., ^W, then type what you want to find, then enter]
+^Q            Where was: Find (in the backward direction)
+M-Q           Search next occurrence backward
+M-W           Search next occurrence forward
 ^\            Replace a string (or rgular expression)
+```
 
-## Cut 'n paste
+###### Cut 'n paste
+```
 ^K            Cut current line (or marked region) and store in cutbuffer
 ^U            paste contents of cutbuffer
 M-6 Alt+6     Copy current line (or marked region) and store it in cutbuffer
 M-A Alt+A     Mark text starting from the cursor position
+```
 
-# Undo Redo
+###### Undo Redo
+```
 M-U Alt+U     Undo
 M-E Alt+G     Redo
+```
 
-## Navigation: 
+###### Navigation: 
+```
 ^C            Display current position of the cursor
 ^/            Go to line and column number [i.e., type ^/ then line no (then column number if you want) then enter]
 left arrow    back one character
@@ -87,15 +106,69 @@ up arrow      up one line
 down arrow    down one line
 ^up arrow     Go to previous block of text
 ^down arrow   Go to next block of text
-
-M-]           Go to the matching bracket
-
-
+M+]           Go to the matching bracket
+Home  (^A)    Go to beginning of current line
+End   (^E)    Go to end of current line
 ```
 
-You can bind or unbind keys in `~.nanorc` or `~/.config/nano/nanorc` or corresponding file. 
+###### Delete
+```
+Bsp     (^H)      Delete the character to the left of the cursor
+Del     (^D)      Delete the character under the cursor
+M-Bsp   (Sh+^Del) Delete backward from cursor to word start
+^Del              Delete forward from cursor to next word start
+M+Del             Throw away the current line (or marked region)
+```
 
-###### colors
+###### Indenting, commenting etc:
+```
+Tab       (M+})   Indent the current line (or marked lines)
+Sh+tab    (M+{)   Unindent the current line (or marked lines)
+M+3               Comment/uncomment the current line (or marked lines)
+^]                Try and complete the current word
+M-D               Count the number of words, lines, and characters
+```
+
+###### File buffers, if you open more than one file at one - they are basically different buffers
+```
+M-left arrow  (M->) (M-.)    Go to previous buffer (opened file)
+M-right arrow (M-<) (M-,)    Go to the next buffer (opened file)
+```
+
+###### More (intermediate user)
+Anchor/Bookmark some line and navigate:
+```
+M-Ins            Place or remove an anchor at the current line
+M-PgUp           Jump backward to the nearest anchor
+M-PgDn           Jump forward to the nearest anchor
+```
+To execute some command from:
+```
+^T               -- then type the shell command and enter
+```
+Like if you type `^T` and then `date`(which is a shell command, producing today's date), it will print today's date in current cursor position. 
+However, this might be problematic if Ctrl+T is already used for some other purpose in your machine. In that case you might bind a new key for this. (See the next paragraph)
+Or, you can do `^R` then `^X` to get this facility of executing commnds. 
+
+###### Create Keybinds (intermediate user)
+You can create your own shortcuts/keybinds in most of these text editors.  
+For example, to exectue a (linux/shell) command and get the output printed inside nano suppose I want to bind `Shift-Alt-E`. Then I should include this next line in `~.nanorc` or `~/.config/nano/nanorc` or corresponding file. 
+```
+bind Sh-M-E execute main
+```
+Then I in usual nano session, I have to `Shift+Alt+E` and type a (shell) command and type enter to get that result.
+There are already some keybindings you can see at `/etc/nanorc`
+
+For quickly uppercasing or lowercasing the word under the cursor.
+```
+bind Sh-M-U "^[Oc^[[1;6D^T|sed 's/.*/\U&/'^M" main
+bind Sh-M-L "^[Oc^[[1;6D^T|sed 's/.*/\L&/'^M" main
+```
+
+There are another important set called `macro` which can record a set of keys and run them subsequently. For more, look at help files. 
+
+
+##### Adding colors
 By default, the colorschemes are not loaded by default. In a nano configuration file named `.nanorc`, typically located in the home directory (~/.nanorc or ~/.config/nano/nanorc or $XDG_CONFIG_HOME/nano/nanorc), put `include /usr/share/nano/*.nanorc` for all default available languages, or `include /usr/share/nano/{lang}.nanorc` for any specific languages - see [this](https://askubuntu.com/questions/90013/how-do-i-enable-syntax-highlighting-in-nano). 
 
 For more customization, see [this](https://www.nano-editor.org/dist/latest/nanorc.5.html) is the official website, also see [this](https://github.com/scopatz/nanorc) and [this](https://github.com/Naereen/nanorc) and [this](https://github.com/sentientmachine/erics_nano_syntax_highlighting) - some of these are for older versions. 
