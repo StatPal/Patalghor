@@ -56,13 +56,13 @@ You can then go from one file to another using the shortcuts/keybinds `Alt+right
 
 Basic shortcuts/keybindings are as follows: 
 
-(<sub><sup>**Ctrl** is denoted as **`^`** which is equivalent to double Esc key, *Meta* (usually **Alt**, but can be Esc/Cmd key also) is denoted as **`M`**, Shift is denoted as `Sh`.
+(<sub>**Ctrl** is denoted as **`^`** which is equivalent to double Esc key, *Meta* (usually **Alt**, but can be Esc/Cmd key also) is denoted as **`M`**, Shift is denoted as `Sh`.</sub>
 
-`Some key + another key` means you have to hold one key and then press another. 
+<sub>`Some key + another key` means you have to hold one key and then press another.</sub> 
 
-Type `Ctrl+G` to get shortcuts and alternative shortcuts in your machine.
-Without paranthesis means explanation in simple usual terms.
-New correspondos to these are also added in new versions</sup></sub>)
+<sub>Type `Ctrl+G` to get shortcuts and alternative shortcuts in your machine.</sub>
+<sub>Without paranthesis means explanation in simple usual terms.</sub>
+<sub>New correspondos to these are also added in new versions</sub>)
 
 ###### File access
 ```
