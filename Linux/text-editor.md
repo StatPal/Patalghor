@@ -14,7 +14,7 @@
         * [Navigation:](#navigation)
         * [Delete](#delete)
         * [Indenting, commenting etc](#indenting-commenting-etc)
-        * [File buffers, if you open more than one file at one - they are basically different buffers](#file-buffers-if-you-open-more-than-one-file-at-one-they-are-basically-different-buffers)
+        * [File buffers](#file-buffers)
         * [More (intermediate user)](#more-intermediate-user)
         * [Create Keybinds (intermediate user)](#create-keybinds-intermediate-user)
       - [Adding colors](#adding-colors)
@@ -152,7 +152,8 @@ M+3               Comment/uncomment the current line (or marked lines)
 M-D               Count the number of words, lines, and characters
 ```
 
-###### File buffers, if you open more than one file at one - they are basically different buffers
+###### File buffers
+If you open more than one file at one - they are basically different buffers. However there can be more complicated scenarios. 
 ```
 M-left arrow  (M->) (M-.)    Go to previous buffer (opened file)
 M-right arrow (M-<) (M-,)    Go to the next buffer (opened file)
