@@ -39,7 +39,8 @@ Gedit is a 'what I see is what I type' editor. Some plug-ins I use frequently ar
 - Spell Checker
 - Word Completion. 
 
-<hr style="border:0.1px solid gray"> </hr>
+
+<hr style="border:1px solid blue"> </hr>
 
 ### nano
 nano is a simple non-modal editor. 
