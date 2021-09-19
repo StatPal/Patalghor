@@ -39,6 +39,18 @@ sed -e 's/^[ \t]*//'
 [source](https://stackoverflow.com/questions/369758/how-to-trim-whitespace-from-a-bash-variable)
 
 
+#### tar and zips
+```bash
+tar -czvf name-of-archive.tar.gz /path/to/directory-or-file
+```
+The meaning:
+-c: Create an archive.
+-z: Compress the archive with gzip.
+-v: Display progress in the terminal while creating the
+-f: Specify the file name.
+
+
+
 #### Tricks:
 
 ##### nano tricks: (Let's admit, nano is a good enough editor to do short jobs)
