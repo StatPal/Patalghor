@@ -4,6 +4,7 @@
 - [Intermediate advanced](#intermediate-advanced)
 - [Specific Editors](#specific-editors)
   * [gedit](#gedit)
+      - [Plug ins](#plug-ins)
   * [nano](#nano)
       - [Basic shortcuts or keybindings](#basic-shortcuts-or-keybindings)
         * [File access](#file-access)
@@ -47,6 +48,7 @@ I would suggest for a user to read https://andreyorst.gitlab.io/posts/2020-04-29
 ------
 ## Specific Editors
 ### gedit
+##### Plug ins 
 Gedit is a 'what I see is what I type' editor. Some plug-ins I use frequently are:
 - Bookmarks
 - Bracket Completion
