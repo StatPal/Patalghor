@@ -134,6 +134,12 @@ geom_errorbar( aes(x=name, ymin=value-sd, ymax=value+sd), width=0.4, colour="ora
 ```
 
 
+##### ROC plots
+```
+geom_roc()
+```
+
+
 
 
 ##### Different coloring techniques
