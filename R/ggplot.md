@@ -90,6 +90,10 @@ fill is the additional parameter here.
 - 
 
 
+#### Themes
+
+
+
 Jittered plot with another data:
 ```R
 a2 <- ggplot(mpg, aes(cty, hwy))
@@ -98,6 +102,47 @@ a2 + geom_jitter()
 with some added color variation with other variables (there would be warning, but you get the idea):
 ```R
 a2 + geom_jitter(aes(color=manufacturer, shape=class))
+```
+
+##### Bar plots and Voilin plot
+For these kind of plots, one variable should be as a factor (say the x variable), and the other should be a continuous/discrete variable.
+
+```R
+ggplot(data, aes(x=name, y=value)) + 
+  geom_bar(stat = "identity")
+```
+geom_bar takes `color`, `fill`, `width` as arguments as usual. 
+
+To make this circular, add
+```R
+  + coord_polar(start = 0)
+```
+
+Often, the factors are sorted according to the factor's lavels. To correct those, you may try the `reorder()` function inside a `with()` call
+```R
+# reorder is close to order, but is made to change the order of the factor levels.
+mpg$class = with(mpg, reorder(class, hwy, median))
+
+ggplot(mpg, aes(x=class, y=hwy, fill=class)) +
+    geom_bar(stat='identity', alpha=0.5)
+```
+Note, if you don't give `stat=identity`, it will try to calculate the `y` values itself as the default is `stat=count`, eventually producing an error. 
+
+You can add error bars also using something like:
+```R
+geom_errorbar( aes(x=name, ymin=value-sd, ymax=value+sd), width=0.4, colour="orange", alpha=0.9, size=1.3)
+```
+
+
+
+
+##### Different coloring techniques
+Add these lines to get different types   of colors and shades
+```R
+scale_fill_hue(c = 40)
+scale_fill_brewer(palette = "Set1")
+scale_fill_grey(start = 0.25, end = 0.75)
+scale_fill_manual(values = c("red", "green", "blue") )
 ```
 
 
