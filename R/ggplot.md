@@ -153,5 +153,33 @@ scale_fill_manual(values = c("red", "green", "blue") )
 
 
 
-## Facet
+## Multiple Plots
+
+There are many ways to create multiple ggplots. I will first describe a simple one, [patchwork](https://cran.r-project.org/web/packages/patchwork/). 
+
+### Patchwork
+
+It is simple, just add plots by `+` sign:
+```R
+library(ggplot2)
+library(patchwork)
+
+p1 <- ggplot(mtcars) + geom_point(aes(mpg, disp))
+p2 <- ggplot(mtcars) + geom_boxplot(aes(gear, disp, group = gear))
+
+p1 + p2
+```
+![](https://github.com/thomasp85/patchwork/blob/master/man/figures/README-example-1.png)
+
+
+
+Other complex layouts are also possible, such as, for nesting three plots on top of a third:
+```R
+p3 <- ggplot(mtcars) + geom_smooth(aes(disp, qsec))
+p4 <- ggplot(mtcars) + geom_bar(aes(carb))
+
+(p1 | p2 | p3) /
+      p4
+```
+![](https://github.com/thomasp85/patchwork/blob/master/man/figures/README-unnamed-chunk-2-1.png)
 
