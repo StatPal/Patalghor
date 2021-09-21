@@ -97,9 +97,26 @@ patchwork & theme_minimal()
 ```
 ![](https://patchwork.data-imaginist.com/articles/guides/assembly_files/figure-html/unnamed-chunk-22-1.png)
 
+When grid sizes are given as a numeric, it will define the relative sizing of the panels.
+```R
+p1 + p2 + p3 + p4 + 
+  plot_layout(widths = c(2, 1))
+```
+![](https://patchwork.data-imaginist.com/articles/guides/layout_files/figure-html/unnamed-chunk-6-1.png)
+
+```R
+p1 + p2 + p3 + p4 + 
+  plot_layout(widths = c(2, 1), heights = unit(c(5, 1), c('cm', 'null')))
+```
+![](https://patchwork.data-imaginist.com/articles/guides/layout_files/figure-html/unnamed-chunk-7-1.png)
+Here, the first row will always occupy 5cm, while the second will expand to fill the remaining area.
 
 
-
+Often the plots comes with guides/legends. We can put these in overall picture issueing `plot_layout(guides = 'collect')`. The opposite of `collect` is `keep` which would keep the separate guides near separate subplots. 
+```R
+p1 + p2 + p3 + p4 +
+  plot_layout(guides = 'collect')
+```
 
 ### 
 https://cran.r-project.org/web/packages/egg/vignettes/Ecosystem.html
