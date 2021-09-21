@@ -7,11 +7,12 @@
       - [Annotation and tagging](#annotation-and-tagging)
       - [Modifying patches](#modifying-patches)
       - [Same size across multiple pages](#same-size-across-multiple-pages)
+    + [gridExtra](#gridextra)
   * [Sources](#sources)
 
 
 ## ggplot2
-There are many ways to create multiple ggplots. I will first describe a simple one, [patchwork](https://cran.r-project.org/web/packages/patchwork/). 
+There are many ways to create multiple ggplots. I will first describe a simple one, [patchwork](https://cran.r-project.org/web/packages/patchwork/). `grid.arrange()` function using [gridExtra] package 
 
 ### Patchwork
 
@@ -157,9 +158,25 @@ for (p in plots_aligned) {
 }
 ```
 
+### gridExtra
+This package is older and more basic than the previous one. A simple usage with the functions `arrangeGrob/grid.arrange()` would be:
+```R
+require(gridExtra)
+plot1 <- qplot(1)
+plot2 <- qplot(1)
+grid.arrange(plot1, plot2, ncol=2)
+```
+
+
+### cowplot
+
+
+### egg
 
 
 ## Sources
 https://patchwork.data-imaginist.com/index.html
+https://cran.r-project.org/web/packages/gridExtra/vignettes/arrangeGrob.html
+https://wilkelab.org/cowplot/articles/aligning_plots.html
 https://cran.r-project.org/web/packages/egg/vignettes/Ecosystem.html
 
