@@ -1,5 +1,7 @@
 # ggplot and related plotting mechanisms
 
+Oh, they have already created a book: https://ggplot2-book.org/index.html
+
 ## Basic plots
 
 ### Basic scatter plot setup
