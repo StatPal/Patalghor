@@ -4,31 +4,42 @@ Everything you forget often - about computers - which are mostly needed in a pro
 
 ### Table Of Contents:
 - [Patalghor](#patalghor)
-    + [🔗 Links to the specific readme files:](#---links-to-the-specific-readme-files-)
-    + [Task List:](#task-list-)
-    + [Todo](#TODO)
+    + [Links to the specific readme files:](#-links-to-the-specific-readme-files)
+    + [Task List](#task-list)
+    + [TODO](#todo)
     + [Contributing](#contributing)
-
 
 
 
 ### 🔗 Links to the specific readme files:
  - [git](git/git.md)
- - [R](R/R.md)
- - [python-virtual environment](python/python.md) | [keras](python/keras.md)
- - [Linux-HPC](Linux/HPC.md)
- - [Linux-main](Linux/Linux.md) | [Linux-install](Linux/install.md) | [Linux-clean](Linux/clean.md)
+ - [R](R)
+    * [ggplot](R/ggplot.md) 
+    * [Multiple plots with ggplot](R/ggplot-multiple-plots.md)
+    * [R](R/R.md)
+ - [python](python) 
+    * [python-virtual environment](python/python.md)
+    * [keras](python/keras.md)
+    * [plot](python/plot.md)
+ - [Linux](Linux)
+    * [Linux-HPC](Linux/HPC.md)
+    * [Text editors in Linux](Linux/text-editor.md)
+    * [navigating fils and directories](Linux/files-and-directories.md)
+    * [Linux-main](Linux/Linux.md)
+    * [Linux-install](Linux/install.md)
+    * [Linux-clean](Linux/clean.md)
 
 
 
-### Task List:
+### Overall Task List:
 - [x] git
-- [ ] R
+- [x] R
 - [x] python
 - [x] Linux
 
 
 ### TODO
+- Complete the pages which are incomplete. ([ggplot](R/ggplot.md), add ggplot-facet, )
 - Indicate Beginner-things by \*\*\*, Intermediate by \*\*, Advanced by \*
 - Include contributing.md.
 
