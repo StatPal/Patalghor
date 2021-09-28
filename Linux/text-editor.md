@@ -174,6 +174,8 @@ Like if you type `^T` and then `date`(which is a shell command, producing today'
 However, this might be problematic if Ctrl+T is already used for some other purpose in your machine. In that case you might bind a new key for this. (See the next paragraph)
 Or, you can do `^R` then `^X` to get this facility of executing commnds. 
 
+To get an idea about which keybinds are usually more usueful, you may look at [this link](https://staffwww.fullcoll.edu/sedwards/Nano/NanoKeyboardCommands.html)
+
 ###### Create Keybinds (intermediate user)
 You can create your own shortcuts/keybinds in most of these text editors.  
 For example, to exectue a (linux/shell) command and get the output printed inside nano suppose I want to bind `Shift-Alt-E`. Then I should include this next line in `~.nanorc` or `~/.config/nano/nanorc` or corresponding file. 
@@ -198,3 +200,33 @@ By default, the colorschemes are not loaded by default. In a nano configuration 
 For more customization, see [this](https://www.nano-editor.org/dist/latest/nanorc.5.html) is the official website, also see [this](https://github.com/scopatz/nanorc) and [this](https://github.com/Naereen/nanorc) and [this](https://github.com/sentientmachine/erics_nano_syntax_highlighting) - some of these are for older versions. 
 
 
+##### Some more settings
+People sometimes `set/unset` things according to their preferences, such as:
+
+```
+set tabsize 4
+# set linenumbers
+set historylog                          # remember search history
+set autoindent
+
+
+set zap                                 # Let an unmodified Backspace or Delete erase the marked region (instead of a single character, and without affecting the cutbuffer).
+set softwrap                            # Display lines that exceed the screen’s width over multiple screen lines.
+set atblanks                            # When soft line wrapping is enabled, make it wrap lines at blank characters (tabs and spaces) instead of always at the edge of the screen.
+set positionlog                         # Save the cursor position of files between editing sessions for 200 recent files
+
+#set minibar
+#set minicolor italic,peach,gray
+
+set titlecolor yellow,gray
+set functioncolor yellow
+set keycolor lightyellow
+
+
+## https://gist.github.com/jyc/1375240
+set brackets ""')>]}"                   # The characters treated as closing brackets when justifying paragraphs. They cannot contain blank characters.  Only closing punctuation, optionally followed by closing brackets, can end sentences.
+set matchbrackets "(<[{)>]}"            # The opening and closing brackets that can be found by bracket searches. They cannot contain blank characters.  The former set must come before the latter set, and both must be in the same order.
+
+
+set speller "aspell -x -c"              # Use this spelling checker instead of the internal one.  This option does not properly have default value.
+```
