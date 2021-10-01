@@ -5,6 +5,7 @@ I started this repository as the collection of commands (mostly linux) which are
 
 About the name, it came from 'Patal', whioich means Underground and 'ghor' which means room. Significance? you interpret it in your own way man. 
 
+---
 **Unimportant infos:** 
 alias: Patalghar. 
 
@@ -17,6 +18,7 @@ Originally, there was a children-teen-adult comedy-adventure-crazy-entertainment
 
 I have some intension to translate it - but I don't know when. 
 
+---
 
 ### Table Of Contents:
 - [Patalghor](#patalghor)
@@ -31,6 +33,7 @@ I have some intension to translate it - but I don't know when.
  - [R](R)
     * [ggplot](R/ggplot.md) 
     * [Multiple plots with ggplot](R/ggplot-multiple-plots.md)
+    * [tidyverse and data](R/tidyverse-more.md)
     * [R](R/R.md)
  - [python](python) 
     * [python-virtual environment](python/python.md)
