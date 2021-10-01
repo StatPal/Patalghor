@@ -9,7 +9,7 @@ About the name, it came from 'Patal', whioich means Underground and 'ghor' which
 alias: Patalghar. 
 
 Originally, there was a children-teen-adult comedy-adventure-crazy-entertainment [book](https://www.goodreads.com/book/show/17205127) by [Shirshendu Mukhopadhyay](https://en.wikipedia.org/wiki/Shirshendu_Mukhopadhyay). This was adapted into a [movie](https://www.imdb.com/title/tt0366886/) later. The story starts like: 
-> 150 years in the past, Aghor Sen, a genius scientist living in the village of Nischintipur invents a device that generates sound waves which can put any living being to sleep. The alien Vik exiled from the planet Nyapcha, lands with his space shuttle on the outskirts of Nischintipur. He gets to know about the machine & tries to steal it but Aghor puts him to sleep. With Aghor's death the instrument is lost.
+> 150 years in the past, Aghor Sen, a genius scientist living in the village of Nischintipur invents a device that can put any living being to sleep. The alien Vik exiled from the planet Nyapcha, lands with his space shuttle on the outskirts of Nischintipur. He gets to know about the machine & tries to steal it but Aghor puts him to sleep. With Aghor's death the instrument is lost.
 > 
 > 150 years later i.e. in the present day Dr. Bhootnath Nondy finds Aghor Sen's diary mentioning this device. Aghar Sen's device is in his laboratory - Patalghar.
 > 
