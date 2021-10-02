@@ -12,7 +12,7 @@
 For many computation intensive works, one have to use high performance computing facilities usually available in universities. Sometimes universities set it up with jupyter notebook server or Rstudio server and life becomes easy. However, those are very specific slolution, specially if there are many types of users using many types of softwares. 
 
 Enough chit-chat, let's go to the **main workflow** of an HPC, what you need to do:
- - <ins>Log in to HPC cluster</ins>: each time you want to work in HPC, you have to *login to your specified account in the specific HPC*, usually using command line interface. Often, you have to be inside campus internet, else, use VPN. If you don't have an account, contact IT/HPC guys. 
+ - <ins>**Log in to HPC cluster**</ins>: each time you want to work in HPC, you have to *login to your specified account in the specific HPC*, usually using command line interface. Often, you have to be inside campus internet, else, use VPN. If you don't have an account, contact IT/HPC guys. 
  - Data Transfer
  - Script file
  - Run a job
