@@ -14,7 +14,7 @@ For many computation intensive works, one have to use high performance computing
 
 ## Main workflow
 Enough chit-chat, let's go to the **main workflow** of an HPC:
- - ***[Log in to HPC cluster]((#log-in)):*** Each time you want to work in HPC, you have to *login to your specified account in the specific HPC*, usually using command line interface. You can edit files, start/run jobs, stop jobs etc from logged in state. Often, you have to be inside campus internet, else, use VPN. If you don't have an account, contact IT/HPC guys. 
+ - ***[Log in to HPC cluster](#log-in):*** Each time you want to work in HPC, you have to *login to your specified account in the specific HPC*, usually using command line interface. You can edit files, start/run jobs, stop jobs etc from logged in state. Often, you have to be inside campus internet, else, use VPN. If you don't have an account, contact IT/HPC guys. 
  - ***Data Transfer:*** You have to transfer data/code file from your computer to HPC and vice versa. 
  - <ins>***Script file and running a job:***</ins> Usually HPC have many nodes/parts. When you login to cluster, you are in *head node*. Here you may do some small jobs there, not heavy jobs. There are other *computing nodes* where you can *submit* your job/code though a *script file.* The *script file* would contain: 
     + Specification of time limits, (and RAM limit, core usage), email notification system etc 
