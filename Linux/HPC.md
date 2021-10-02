@@ -1,6 +1,7 @@
 # High Performance Computing (HPC) cluster:
 
-+ [Log in:](#log-in)
++ [Main Workflow](#main-workflow)
++ [Log in](#log-in)
     * [To include Graphical outputs](#graphical-outputs)
 + [Data transfer](#data-transfer)
     * [Filezilla:](#filezilla)
@@ -11,41 +12,73 @@
 
 For many computation intensive works, one have to use high performance computing facilities usually available in universities. Sometimes universities set it up with jupyter notebook server or Rstudio server and life becomes easy. However, those are very specific slolution, specially if there are many types of users using many types of softwares. 
 
-Enough chit-chat, let's go to the **main workflow** of an HPC, what you need to do:
- - <ins>**Log in to HPC cluster**</ins>: each time you want to work in HPC, you have to *login to your specified account in the specific HPC*, usually using command line interface. Often, you have to be inside campus internet, else, use VPN. If you don't have an account, contact IT/HPC guys. 
- - Data Transfer
- - Script file
- - Run a job
- - Control a job
+## Main workflow
+Enough chit-chat, let's go to the **main workflow** of an HPC:
+ - ***[Log in to HPC cluster]((#log-in)):*** Each time you want to work in HPC, you have to *login to your specified account in the specific HPC*, usually using command line interface. You can edit files, start/run jobs, stop jobs etc from logged in state. Often, you have to be inside campus internet, else, use VPN. If you don't have an account, contact IT/HPC guys. 
+ - ***Data Transfer:*** You have to transfer data/code file from your computer to HPC and vice versa. 
+ - <ins>***Script file and running a job:***</ins> Usually HPC have many nodes/parts. When you login to cluster, you are in *head node*. Here you may do some small jobs there, not heavy jobs. There are other *computing nodes* where you can *submit* your job/code though a *script file.* The *script file* would contain: 
+    + Specification of time limits, (and RAM limit, core usage), email notification system etc 
+    + Possibly loading the *modules* or preinstalled programs (such as `module load r`)
+    + Command to run your original R/python/c/cpp etc script. 
+ - <ins>Control a job</ins>: Abort a job or check how it is going...
 
-(*Many HPC uses slurm-workload manager as cluster-management and job scheduling system. 
-I am assuming that the HPC uses this facilty. To know more, see https://slurm.schedmd.com/overview.html *)
+(*I am assuming that the HPC uses this slurm-workload manager as cluster-management and job scheduling system and the commands are according to this manager. To know more, see https://slurm.schedmd.com/overview.html*)
 
+
+------
 
 ## Log in:
-The HPC cluster nodes usually run some Linux/Unix-like Operating System. You have to use secure shell(**ssh**) to log-in (unfortunately no GUI type desktop manager to log-in.) **ssh** is available in Linux, Mac(use terminal); Windows(open Powershell). For old Windows, use *Putty ssh client*, or use *Rstudio terminal pane*(Rstudio users).
+The HPC cluster nodes usually run some Linux/Unix-like Operating System. You have to use **ssh**(secure shell) to log-in (unfortunately no GUI as I know.) **ssh** is available in Linux, Mac; Windows(open Powershell). For old Windows, use *Putty ssh client*, or use *Rstudio terminal pane*(Rstudio users).
 
-**To log-in, you have to something like:**
+**To log-in, write like this (or equivalent):**
 ```bash
-ssh YournameID@cluster.its.iastate.edu
+ssh YournameID@nova.its.iastate.edu
 ```
-Then you have to give your current Google Authenticator number (You have to set-up it for the first time) and your password. 
-After successful login, you'll see something like: `[YournameID@cluster ~]$` by default. 
+After pressing enter, it will take your current Google Authenticator number (You have to set-up it for the first time) and then your password. 
+After successful login, you'll see something like: `[YournameID@nova ~]$`. 
+
+If you log-in to some other machine, the part after the `@` would change, such as `condo2017.its.iastate.edu` etc. 
+
+If you are done, you can use `Ctrl+D` or `logout` to log out. 
 
 
 
-#### Graphical outputs: 
-By default, graphical outputs are not coming to your computer. To get graphical outputs(in interactive mode, see later) you can actually do something like: 
+#### Qn: I can't see my plots: 
+Suppose, you are plotting an image in some software like R, but you are not getting any graphical outputs. What can you do? 
+
+By default, graphical outputs will not be forwarded from HPC to your computer. To get graphical outputs you can actually do something like: 
 ```bash
 ssh -Y YournameID@cluster.its.iastate.edu
 ```
 (i.e., adding a -Y flag.) However, the connection gets relatively slow. 
 In `R`, if you do nothing, it will automatically print all images stacked in a pdf file named `Rplots.pdf`. You can see it using Filezilla/scp/Globulus etc. 
 
+***Warning***, do all these experiments in **interactive mode**. Heavy computations in head node is discouraged. 
+
 
 ## Data transfer
 
 #### Filezilla:
+File->SiteManager
+New Site
+In host (new site will be highlighted, give it a name such as condo)
+In the general tab on the right side, put:
+Host: condodtn.its.iastate.edu
+Change protocol to SFTP
+set user to your netid
+set login type to "Interactive"
+Go to transfer settings tab
+check limit number of simultaneous connections
+Make sure maximum is 1 (this is crucial)
+click ok
+
+Now to connect,
+file->sitemanager
+select the site you created
+click connect
+When asked for password, first enter the TOTP token from google authenticator. Hit enter. And then enter the actual password.
+
+(This part is tweaked from somakd's email)
 
 
 #### scp: 
