@@ -1,12 +1,29 @@
-# HPC cluster usual commands:
+# High Performance Computing (HPC) cluster:
 
-**Many HPC uses slurm-workload manager as cluster-management and job scheduling system. 
-I am assuming that the HPC uses this facilty.**
-To know more, see https://slurm.schedmd.com/overview.html
++ [Log in:](#log-in)
+    * [To include Graphical outputs](#graphical-outputs)
++ [Data transfer](#data-transfer)
+    * [Filezilla:](#filezilla)
+    * [scp:](#scp)
++ [Run a job:](#run-a-job)
++ [Control job(s):](#control-jobs)
 
 
-### Log in:
-The HPC cluster nodes usually run some kind of Unix-like OS. You have to use secure shell(**ssh**) to log-in (unfortunately no GUI type desktop manager to log-in.) **ssh** is available in Linux, Mac(use terminal); Windows(open Powershell). For old Windows, use *Putty ssh client*, or use **Rstudio terminal pane**(Rstudio users).
+For many computation intensive works, one have to use high performance computing facilities usually available in universities. Sometimes universities set it up with jupyter notebook server or Rstudio server and life becomes easy. However, those are very specific slolution, specially if there are many types of users using many types of softwares. 
+
+Enough chit-chat, let's go to the **main workflow** of an HPC, what you need to do:
+ - <ins>Log in to HPC cluster</ins>: each time you want to work in HPC, you have to *login to your specified account in the specific HPC*, usually using command line interface. Often, you have to be inside campus internet, else, use VPN. If you don't have an account, contact IT/HPC guys. 
+ - Data Transfer
+ - Script file
+ - Run a job
+ - Control a job
+
+(*Many HPC uses slurm-workload manager as cluster-management and job scheduling system. 
+I am assuming that the HPC uses this facilty. To know more, see https://slurm.schedmd.com/overview.html *)
+
+
+## Log in:
+The HPC cluster nodes usually run some Linux/Unix-like Operating System. You have to use secure shell(**ssh**) to log-in (unfortunately no GUI type desktop manager to log-in.) **ssh** is available in Linux, Mac(use terminal); Windows(open Powershell). For old Windows, use *Putty ssh client*, or use *Rstudio terminal pane*(Rstudio users).
 
 **To log-in, you have to something like:**
 ```bash
@@ -17,7 +34,7 @@ After successful login, you'll see something like: `[YournameID@cluster ~]$` by 
 
 
 
-###### Graphical outputs: 
+#### Graphical outputs: 
 By default, graphical outputs are not coming to your computer. To get graphical outputs(in interactive mode, see later) you can actually do something like: 
 ```bash
 ssh -Y YournameID@cluster.its.iastate.edu
@@ -26,12 +43,12 @@ ssh -Y YournameID@cluster.its.iastate.edu
 In `R`, if you do nothing, it will automatically print all images stacked in a pdf file named `Rplots.pdf`. You can see it using Filezilla/scp/Globulus etc. 
 
 
-### Data transfer
+## Data transfer
 
-##### Filezilla:
+#### Filezilla:
 
 
-##### scp: 
+#### scp: 
 (secure copy)`scp` is basically like linux command `cp` (copy). The basic syntax of `cp` is:
 `cp <path/if/needed/first_file_name> <path/if/needed/target_file_name>`
 or **if you are copying to a different directory with the same name:**
@@ -50,7 +67,7 @@ For large files, you would possibly need to put files in `/work/<group>/<user>` 
 
 
 
-### Run a job:
+## Run a job:
 To run a job after logging in (for interactive runs, see later), usually, you have to 
  - first have a program file to be run (such as `file.R` or `file.py` or `file.cpp` etc.)
  - Create a script/batch file (say `scriptfile.sh` or `scriptfile.script` etc.) which have the instructions about time-limit, memory-limit etc and how to run the program:
@@ -86,7 +103,7 @@ Rscript --no-save  filename.R
 ```
 
 
-### Control job(s):
+## Control job(s):
 To see all running or pending jobs:
 `squeue`
 To see the jobs corresponding to from your account:
