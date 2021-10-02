@@ -1,26 +1,16 @@
 # High Performance Computing (HPC) cluster:
 
-+ [Main Workflow](#main-workflow)
-+ [Log in](#log-in)
-    * [To include Graphical outputs](#graphical-outputs)
-+ [Data transfer](#data-transfer)
-    * [Filezilla:](#filezilla)
-    * [scp:](#scp)
-+ [Run a job:](#run-a-job)
-+ [Control job(s):](#control-jobs)
-
-
 For many computation intensive works, one have to use high performance computing facilities usually available in universities. Sometimes universities set it up with jupyter notebook server or Rstudio server and life becomes easy. However, those are very specific slolution, specially if there are many types of users using many types of softwares. 
 
 ## Main workflow
 Enough chit-chat, let's go to the **main workflow** of an HPC:
- - ***[Log in to HPC cluster](#log-in):*** Each time you want to work in HPC, you have to *login to your specified account in the specific HPC*, usually using command line interface. You can edit files, start/run jobs, stop jobs etc from logged in state. Often, you have to be inside campus internet, else, use VPN. If you don't have an account, contact IT/HPC guys. 
- - ***Data Transfer:*** You have to transfer data/code file from your computer to HPC and vice versa. 
- - <ins>***Script file and running a job:***</ins> Usually HPC have many nodes/parts. When you login to cluster, you are in *head node*. Here you may do some small jobs there, not heavy jobs. There are other *computing nodes* where you can *submit* your job/code though a *script file.* The *script file* would contain: 
+ - ***[Log in to HPC cluster](#log-in):*** Each time you want to work in HPC, you have to *login to your specified account in the specific HPC*, usually using command line interface. You can edit files, start/run jobs, stop jobs etc from logged in state. Often, you have to be inside campus internet, else, use VPN. If you don't have an account, contact IT/HPC guys. There can be some common confusions about graphics unavailibility which are answered [here](#qn-i-cant-see-my-plots)
+ - ***[Data Transfer:](#data-transfer)*** You have to transfer data/code file from your computer to HPC and vice versa. You can do it using GUI [Filezilla](#filezilla) or command line based [scp](#scp) or Globulus. Each has it's own pros and cons. 
+ - <ins>***[Script file and running a job:](#run-a-job)***</ins> Usually HPC have many nodes/parts. When you login to cluster, you are in *head node*. Here you may do some small jobs there, not heavy jobs. There are other *computing nodes* where you can *submit* your job/code though a *script file.* The *script file* would contain: 
     + Specification of time limits, (and RAM limit, core usage), email notification system etc 
     + Possibly loading the *modules* or preinstalled programs (such as `module load r`)
     + Command to run your original R/python/c/cpp etc script. 
- - <ins>Control a job</ins>: Abort a job or check how it is going...
+ - <ins>[Control a job](#control-jobs)</ins>: Abort a job or check how it is going...
 
 (*I am assuming that the HPC uses this slurm-workload manager as cluster-management and job scheduling system and the commands are according to this manager. To know more, see https://slurm.schedmd.com/overview.html*)
 
