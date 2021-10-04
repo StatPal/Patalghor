@@ -12,6 +12,7 @@
     + [Checkout one file from another branch](#checkout-one-file-from-another-branch)
     + [Git log](#git-log)
     + [Remotes](#remotes)
+    + [Tags](#git-tag)
 
 **Why you might use git??**
 
