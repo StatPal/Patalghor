@@ -162,3 +162,28 @@ show recent commits, most recent on top. Useful options: --color with color --gr
 
 
 #### Remotes
+
+
+#### git tag
+You can give tags to some commits which you think are important, like:
+```bash
+git tag software-v1.1
+```
+Then push it to remote repository by:
+```bash
+git push origin <tag-name>
+```
+If you want to push all tags, you may try `git push --tags`
+
+
+To remove a tag:
+```bash
+git tag -d <tag-name>
+```
+and to push that to remote
+```bash
+git push --delete origin <tag-name>
+```
+
+
+
