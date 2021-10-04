@@ -168,7 +168,7 @@ show recent commits, most recent on top. Useful options: --color with color --gr
 #### git tag
 You can give tags to some commits which you think are important, like:
 ```bash
-git tag software-v1.1
+git tag <tag-name>
 ```
 Then push it to remote repository by:
 ```bash
