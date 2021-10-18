@@ -9,13 +9,11 @@ There are huge changes in tmux from version to version. I will try to stick to t
 
 ## Tricks: 
 
-### 
-Can't copy from just one block?
+### As you try to copy from one pane, things from other pane is also selected?
 With tmux 1.8+, do `prefix-z` too zoom a specific pane, copy it, then do `prefix-z` to come back to original panes. 
 https://news.ycombinator.com/item?id=7758368 and https://github.com/tmux/tmux/issues/2096
 
 ### Copy paste
-
 Copy:
 * Press `prefix + [` to enter copy mode.
 * Use arrow keys to go to the start/end of text selection.
@@ -25,4 +23,10 @@ Copy:
 Paste:
 * Press `prefix + ]` in insert mode.
 
-https://unix.stackexchange.com/a/333294
+[source](https://unix.stackexchange.com/a/333294)
+
+### Scroll
+* Press `prefix + [` to enter copy mode.
+* scroll with arrow keys (or ...)
+* Press `q` to exit. 
+[source](https://superuser.com/questions/209437/how-do-i-scroll-in-tmux)
