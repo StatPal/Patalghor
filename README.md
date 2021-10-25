@@ -3,20 +3,7 @@
 I started this repository as the collection of commands (mostly linux) which are handy - but which I forget too often. Eventually it was becoming a tutorial for many things. So I tried to transform it into a handbook thingy and that's mostly it. These are mostly needed in a project - usually related to computation or <sup>[1](#myfootnote1)</sup> statistics.
 **Feel free to do feature requests and bug reports through github.**
 
-About the name, it came from 'Patal', whioich means Underground and 'ghor' which means room. Significance? you interpret it in your own way man. 
-
----
-**Unimportant infos:** 
-alias: Patalghar. 
-
-Originally, there was a children-teen-adult comedy-adventure-crazy-entertainment [book](https://www.goodreads.com/book/show/17205127) by [Shirshendu Mukhopadhyay](https://en.wikipedia.org/wiki/Shirshendu_Mukhopadhyay). This was adapted into a [movie](https://www.imdb.com/title/tt0366886/) later. The story starts like: 
-> 150 years in the past, Aghor Sen, a genius scientist living in the village of Nischintipur invents a device that can put any living being to sleep. The alien Vik exiled from the planet Nyapcha, lands with his space shuttle on the outskirts of Nischintipur. He gets to know about the machine & tries to steal it but Aghor puts him to sleep. With Aghor's death the instrument is lost.
-> 
-> 150 years later i.e. in the present day Dr. Bhootnath Nondy finds Aghor Sen's diary mentioning this device. Aghar Sen's device is in his laboratory - Patalghar.
-> 
-> Meanwhile, Vik wakes up and starts running from pillar to post looking for the device which had put him to sleep. And then the story continues... 
-
-I have some intension to translate it - but I don't know when. 
+About the name, it came from 'Patal', whioich means Underground and 'ghor' which means room. Significance? you interpret it in your own way.
 
 ---
 
@@ -77,6 +64,20 @@ Please adhere to this project's `code of conduct`.
 
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+
+---
+### Unimportant infos
+alias: Patalghar. 
+
+Originally, there was a children-teen-adult comedy-adventure-crazy-entertainment [book](https://www.goodreads.com/book/show/17205127) by [Shirshendu Mukhopadhyay](https://en.wikipedia.org/wiki/Shirshendu_Mukhopadhyay). This was adapted into a [movie](https://www.imdb.com/title/tt0366886/) later. The story starts like: 
+> 150 years in the past, Aghor Sen, a genius scientist living in the village of Nischintipur invents a device that can put any living being to sleep. The alien Vik exiled from the planet Nyapcha, lands with his space shuttle on the outskirts of Nischintipur. He gets to know about the machine & tries to steal it but Aghor puts him to sleep. With Aghor's death the instrument is lost.
+> 
+> 150 years later i.e. in the present day Dr. Bhootnath Nondy finds Aghor Sen's diary mentioning this device. Aghar Sen's device is in his laboratory - Patalghar.
+> 
+> Meanwhile, Vik wakes up and starts running from pillar to post looking for the device which had put him to sleep. And then the story continues... 
+
+I have some intension to translate it - but I don't know when. 
+
 
 
 <sup name="myfootnote1">1</sup> This `or` is an inclusive or.
