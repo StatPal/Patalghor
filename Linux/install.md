@@ -1,17 +1,14 @@
-# Installation guide for different programs/softwares in linux:
-
-
 # Usual way to install packages from source:
  - Locate and download the source code (which is usually compressed)
- - Unpack the source code
+ - Unpack the source code if it is compressed
  - Compile the code
  - Install the resulting executable
  - Set paths to the installation directory
 
 
-The simplest way to compile a package (with `make`) is:
+The simplest way/code structure to compile a package (with `make`) is:
  - Goto the directory containing the package's source code.
- - Type `./configure` to configure the package for your system.
+ - Type `./configure` to *configure* the package for your system.
  - Type `make` to **compile the package**.
  - Optionally(*but recommended*), type `make check` to run any tests that come with the package.
  - Type `make install` to install the programs and any data files and documentation.
@@ -19,7 +16,13 @@ The simplest way to compile a package (with `make`) is:
 
 
 
-I will show how to install nano-text-editor (latest stable version, to be installed **somewhere in your $HOME directory, not system-wise**)
+## Example
+I have shown how to install nano and R below (version of your choice). Installation of nano is written in more detail. 
+
+
+### nano
+
+I will show (in detail) how to install nano-text-editor (latest stable version, to be installed **somewhere in your $HOME directory, not system-wise**)
 This is **important** if you want to install something in HPC **without root access**
 
 ```bash
@@ -101,6 +104,42 @@ For statisticians, you might come across many large `*.csv` data/other files. It
 
 
 
+
+
+
+### R
+This part is to install R in iowa state cluster from source. 
+```
+module load gcc
+module load pcre2
+
+# assisting modules
+module load cairo
+module load libtiff
+module load icu4c
+
+# download (get link from official website of R, 
+# such as right-click and copy-link the latest version from 'https://cloud.r-project.org/')
+wget https://mirror.las.iastate.edu/CRAN/src/base/R-4/R-4.1.2.tar.gz
+# unzip and untar
+tar -xvzf R-4.1.2.tar.gz
+# goto the directory
+cd R-4.1.2
+
+# configure the path and other things
+./configure --prefix=$HOME/.local/ --with-x=no
+
+# install and check
+make
+make check
+```
+Somehow it is not installing in the correct directory. It is installing in the same directory. If the current directory is `path/abc`, then you can try `path/abc/bin/R` would run R with new version you installed. 
+
+To make this default R, you can use the same trick used in installation of nano: 
+**Add this line to your ~/.bashrc or ~/.zshrc or equivalent:**
+```bash
+export PATH=path/abc/bin:$PATH
+```
 
 
 
