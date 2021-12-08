@@ -8,7 +8,7 @@ Tidyverse contains many subparts such as ggplot2(for plots), tidyr(for data clea
   * [pivot_wider(): make a dataset wideer/in wide format:](#pivot-wider-make-a-dataset-wideer-in-wide-format)
       - [Simple Example](#simple-example)
       - [Join names](#join-names)
-  * [Complex scenarios, when we need both, after one another:](#complex-scenarios--when-we-need-both--after-one-another)
+  * [Complex scenarios, when we need both, after one another:](#complex-scenarios-when-we-need-both-after-one-another)
 - [dplyr Functions](#functions)
   * [filter(): Return rows with matching conditions](#filter-return-rows-with-matching-conditions)
   * [mutate():  Create or transform variables](#mutate-create-or-transform-variables)
