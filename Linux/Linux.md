@@ -3,6 +3,17 @@
 
 ## Find command:
 
+#### Find all files of a certain pattern:
+Suppose, you want to list all the files with pattern `*.R`(, i.e., extension R), you can use:
+```bash
+find . -name "*.R"
+```
+If you want only the file names with the word `ggplot2` inside the file, you can use:
+```bash
+find . -name "*.R" -exec grep -l 'ggplot2' {} \;
+```
+
+
 #### Newer than Sep 10, Older than Sep 13
 ```bash
 find . -type f -newermt "Sep 10" \! -newermt "Sep 13" -print
@@ -20,7 +31,6 @@ find . -type f -newermt "Sep 10" \! -newermt "Sep 13" -delete
 ```bash
 find . -name '*<pattern-of-the-files>' -exec sed -i -e 's/<search-pattern>/<replace-pattern>/g' {} \;
 ```
-
 
 ## Batch copy rename:
 ```bash
