@@ -153,7 +153,15 @@ scale_fill_grey(start = 0.25, end = 0.75)
 scale_fill_manual(values = c("red", "green", "blue") )
 ```
 
-
+Different coloring proccess:
+- https://ggplot2-book.org/scale-colour.html#colour-continuous
+- https://cran.r-project.org/web/packages/munsell/munsell.pdf
+- https://cran.r-project.org/web/packages/colorBlindness/vignettes/colorBlindness.html
+- http://homepage.cs.uiowa.edu/~luke/classes/STAT4580-2020/color.html#munsell-color-space
+- https://colorspace.r-forge.r-project.org/
+- https://ggplot2.tidyverse.org/reference/scale_gradient.html
+- https://ggplot2.tidyverse.org/reference/scale_brewer.html
+- https://scales.r-lib.org/reference/seq_gradient_pal.html
 
 
 ## Grouping
