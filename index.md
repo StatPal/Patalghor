@@ -1,7 +1,7 @@
 # Patalghor
 
 The link to github page is: https://statpal.github.io/Patalghor/
-
+Also see https://resources.github.com/whitepapers/github-and-rstudio/ and https://bookdown.org/yihui/blogdown/github-pages.html
 
 I started this repository as the collection of commands (mostly linux) which are handy - but which I forget too often. Eventually it was becoming a tutorial for many things. So I tried to transform it into a handbook thingy and that's mostly it. These are mostly needed in a project - usually related to computation or <sup>[1](#myfootnote1)</sup> statistics.
 **Feel free to do feature requests and bug reports through github.**
