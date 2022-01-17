@@ -79,3 +79,9 @@ bars +
   )
 ```
 ![Image](https://ggplot2-book.org/scales-colour_files/figure-html/unnamed-chunk-27-1.png)
+
+
+
+
+### Include later
+Also see https://stackoverflow.com/questions/53286792/how-to-select-certain-colours-from-a-colour-palette-in-r-ggplot
