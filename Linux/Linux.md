@@ -32,7 +32,7 @@ find . -type f -newermt "Sep 10" \! -newermt "Sep 13" -delete
 find . -name '*<pattern-of-the-files>' -exec sed -i -e 's/<search-pattern>/<replace-pattern>/g' {} \;
 ```
 
-## Batch copy rename:
+### Batch copy rename:
 ```bash
 lis=($(ls <pattern>))
 for file in "${lis[@]}"
@@ -47,6 +47,13 @@ done
 sed -e 's/^[ \t]*//'
 ```
 [source](https://stackoverflow.com/questions/369758/how-to-trim-whitespace-from-a-bash-variable)
+
+
+#### Remove some last lines
+```bash
+sed 'GIVEN_LINE_NO, $ d' input_file
+```
+[source](https://www.baeldung.com/linux/remove-last-n-lines-of-file)
 
 
 #### tar and zips
