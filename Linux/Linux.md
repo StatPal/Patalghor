@@ -55,6 +55,14 @@ sed 'GIVEN_LINE_NO, $ d' input_file
 ```
 [source](https://www.baeldung.com/linux/remove-last-n-lines-of-file)
 
+However, this is not efficient, especially if you have less space in your drive. An alternative would be:
+```bash
+lines=$(head old.file -n GIVEN_LINE_NO)
+rm old.file
+echo "$lines" > file.txt
+mv file.txt old.file
+```
+
 
 #### tar and zips
 ```bash
