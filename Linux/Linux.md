@@ -62,6 +62,7 @@ rm old.file
 echo "$lines" > file.txt
 mv file.txt old.file
 ```
+[source](https://stackoverflow.com/questions/45125826/delete-everything-after-a-certain-line-in-bash)
 
 
 #### tar and zips
