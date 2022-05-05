@@ -88,3 +88,4 @@ Also see https://stackoverflow.com/questions/53286792/how-to-select-certain-colo
 
 For themes: http://www.sthda.com/english/wiki/ggplot2-themes-and-background-colors-the-3-elements
 
+Other random questions: https://stackoverflow.com/questions/65347092/how-do-you-completely-remove-the-spaces-between-facet-strips-to-connect-a-geom
