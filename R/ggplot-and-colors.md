@@ -85,3 +85,6 @@ bars +
 
 ### Include later
 Also see https://stackoverflow.com/questions/53286792/how-to-select-certain-colours-from-a-colour-palette-in-r-ggplot
+
+For themes: http://www.sthda.com/english/wiki/ggplot2-themes-and-background-colors-the-3-elements
+
