@@ -41,12 +41,14 @@ About the name, it came from 'Patal', whioich means Underground and 'ghor' which
 - [x] R
 - [x] python
 - [x] Linux
+- [ ] Latex
 
 
 ### TODO
 - Complete the pages which are incomplete. ([ggplot](R/ggplot.md), add ggplot-facet, )
 - Indicate Beginner-things by \*\*\*, Intermediate by \*\*, Advanced by \*
 - Include contributing.md.
+- Latex text font installation (https://tex.stackexchange.com/questions/88423/manual-font-installation)
 
 
 Some other important links:
