@@ -13,6 +13,7 @@
     + [Git log](#git-log)
     + [Remotes](#remotes)
     + [Tags](#git-tag)
+    + [Catfile](#catfile)
 
 **Why you might use git??**
 
@@ -185,6 +186,19 @@ and to push that to remote
 ```bash
 git push --delete origin <tag-name>
 ```
+
+#### Catfile
+
+Extract and dump a file of a previous version.
+```bash
+git cat-file -p commitid:./check.tex > ./check2.tex
+```
+
+commitid can be anything:
+
+* symbolic ref (branch, tag names; remote too)
+* a commit hash
+* a revision spec like HEAD~3, branch1@{4} etc.
 
 
 
