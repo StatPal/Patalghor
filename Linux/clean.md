@@ -27,7 +27,11 @@ find ~/.cache/ -type f -mtime +30 -exec rm -rf {} \;	## delete those
 ```bash
 ```
 
-
+### Clean Code OSS workspaceStorage file
+```bash
+cd ".config/Code - OSS/User/workspaceStorage/"
+rm -rf *
+```
 
 ## Show current disk usage:
 ```bash
