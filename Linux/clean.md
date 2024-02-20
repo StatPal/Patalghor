@@ -25,12 +25,20 @@ find ~/.cache/ -type f -mtime +30 -exec rm -rf {} \;	## delete those
 
 ### Clean conda files:
 ```bash
+conda clean --all
 ```
 
 ### Clean Code OSS workspaceStorage file
 ```bash
 cd ".config/Code - OSS/User/workspaceStorage/"
 rm -rf *
+```
+
+### Clean other browser cache files inside the .config folder:
+```bash
+cd ".config/google-chrome/Default/Service Worker/CacheStorage"
+rm -rf *
+cd
 ```
 
 ## Show current disk usage:
