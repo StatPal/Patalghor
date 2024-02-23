@@ -28,7 +28,7 @@ find ~/.cache/ -type f -mtime +30 -exec rm -rf {} \;	## delete those
 conda clean --all
 ```
 
-### Clean Code OSS workspaceStorage file
+### Clean Code OSS workspaceStorage file - ALWAYS CHECK THE DIRECTORY BEFORE REMOVING THINGS
 ```bash
 cd ".config/Code - OSS/User/workspaceStorage/"
 rm -rf *
