@@ -31,13 +31,13 @@ conda clean --all
 ### Clean Code OSS workspaceStorage file - ALWAYS CHECK THE DIRECTORY BEFORE REMOVING THINGS
 ```bash
 cd ".config/Code - OSS/User/workspaceStorage/"
-rm -rf *
+# rm -rf *
 ```
 
 ### Clean other browser cache files inside the .config folder:
 ```bash
 cd ".config/google-chrome/Default/Service Worker/CacheStorage"
-rm -rf *
+# rm -rf *
 cd
 ```
 
