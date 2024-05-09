@@ -5,6 +5,8 @@
  - Install the resulting executable
  - Set paths to the installation directory
 
+(If you need this just for installing a text editor, look at `micro` editor without any hassle. See micro editor install without hassle, see [text-editor](text-editor.md))
+
 
 The simplest way/code structure to compile a package (with `make`) is:
  - Goto the directory containing the package's source code.
