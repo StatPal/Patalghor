@@ -15,13 +15,11 @@ cd suma_demo/afni
 
 # Start AFNI in a mode so that it can listen to connections from SUMA
 afni -niml &
-# underlay is DemoSubj_SurfVol_Alnd_Exp
-# overlay is DemoSubj_EccExpavir
+# underlay is DemoSubj_SurfVol_Alnd_Exp, overlay is DemoSubj_EccExpavir
 # Both in orig view (try the original view, even the skull is not stripped)
 
 suma -spec ~/CD/suma_demo/SurfData/SUMA/std.DemoSubj_both.spec -sv DemoSubj_SurfVol_Alnd_Exp+orig
-# Don't know what ../ does not work on my machine. zsh problem????
-# It can be `~/CD/suma_demo/` instead of `~/suma_demo`
+# It can be `~/CD/suma_demo/` instead of `~/suma_demo` # Don't know why ../ does not work!
 ```
 Then press `t` to communicate, and you'll see the results. Ideally, they should align exactly. But if you use a different spec than your anatomical image, it may be a little different. Be careful that it is not too much different or you have to use `@SUMA_Make_Spec_FS` or something equivalent. 
 
@@ -38,13 +36,13 @@ Working:
 See more [here](https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/SUMA/Viewer.html)
 
 
-Now, suppose we have a different directory, and the data to be plotted is in talaraich view. 
+Now, suppose we have a different directory, and the data to be plotted is in Talairach view. 
 ```bash
 cd Research/Tensor/MDD
 afni -niml &
-# Put the talariach view with underlay as TT_N27, overlay with all_cases.nii
+# Put the Talairach view with underlay as TT_N27, overlay with all_cases.nii
 
-Put the surface there and please check the contours and the original/talaraich view.
+Put the surface there, and please check the contours and the original/talairach view.
 suma -spec ~/CD/suma_demo/SurfData/SUMA/std.DemoSubj_both.spec -sv DemoSubj_SurfVol+tlrc.HEAD &
 ```
 
@@ -59,7 +57,6 @@ dim(tmp_all)
 dim(tmp_all[,,,,1:2])
 summary(tmp_all[,,,,1:2])
 dim(abc)
-
 
 
 abc[,,,1,1] <- tmp_all[1,,,,1]
@@ -83,15 +80,9 @@ apply(abc[,,,,], 4, sum)
 RNifti::writeNifti(abc, "tmp2")
 # system("3dcopy /home/subrata/Research/Tensor/MDD/tmp2.nii tmp3")
 ```
+CHECK THE TT_N27 map already created using the aforementioned link instead of the file `DemoSubj_SurfVol+tlrc.HEAD` created by you. 
 
-CHECK THE TT_N27 map already created using the aforementioned link, instead of the file `DemoSubj_SurfVol+tlrc.HEAD` created by you. 
-
-
-
-
-
-
-Check these later
+SUMA can also use functions like `3dVol2Surf`, which gives a direct command line mapping from a 3d volume dataset directly into a cortical dataset (Check 43 page onwards of [this pdf](https://afni.nimh.nih.gov/pub/dist/edu/latest/suma/suma.pdf)). Check these later:
 ```
 suma -spec ~/Downloads/suma_demo/SurfData/SUMA/std.DemoSubj_both.spec  -sv anat_final.sub-02 &
 suma -spec ~/CD/suma_demo/SurfData/SUMA/std.DemoSubj_both.spec -sv DemoSubj_SurfVol+orig.BRIK &
