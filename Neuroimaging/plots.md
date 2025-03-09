@@ -1,6 +1,10 @@
-This file talks about plotting neuroimaging data and the obstacles often faced while doing that. 
+This help file talks about plotting neuroimaging data and the obstacles often faced while doing that, more specifically, 
+- [Using SUMA for surface-based plotting](#using-suma-for-surface-based-plotting)
+- [R code to read and write nii file](#r-code-to-read-and-write-nii-file)
+- [Other resources to consider](#other-resources-to-consider)
 
-## Using SUMA:
+
+# Using SUMA for surface-based plotting:
 SUMA does a surface-level analysis and plotting of a brain image in conjunction with AFNI, which is specifically very good for surface-level plotting. 
 
 For quick display (mostly) of Talairach or MNI data:
@@ -46,44 +50,39 @@ Put the surface there, and please check the contours and the original/talairach 
 suma -spec ~/CD/suma_demo/SurfData/SUMA/std.DemoSubj_both.spec -sv DemoSubj_SurfVol+tlrc.HEAD &
 ```
 
-The R code used to create the `all_cases.nii` file: (Now I can't really remember how the first all_case+tlrc.BRIK was created)
-```R
-library(fmri)
-# filename <- paste0("/work/LAS/maitra-lab/Datasets/MDD/group_analysis_MDD_LOO_all_runs/all_case+tlrc.BRIK")
-filename <- paste0("all_case.nii")
-abc <- RNifti::readNifti(filename)
-tmp_all <- readRDS("/mnt/maitra-lab/subrata/MDD/Act_map_perm_group_analysis_added_all.rds")
-dim(tmp_all)
-dim(tmp_all[,,,,1:2])
-summary(tmp_all[,,,,1:2])
-dim(abc)
-
-
-abc[,,,1,1] <- tmp_all[1,,,,1]
-abc[,,,1,2] <- tmp_all[2,,,,1]
-abc[,,,1,3] <- tmp_all[3,,,,1]
-abc[,,,1,4] <- tmp_all[4,,,,1]
-abc[,,,1,5] <- tmp_all[5,,,,1]
-
-abc[,,,1,5 + 1] <- tmp_all[1,,,,2]
-abc[,,,1,5 + 2] <- tmp_all[2,,,,2]
-abc[,,,1,5 + 3] <- tmp_all[3,,,,2]
-abc[,,,1,5 + 4] <- tmp_all[4,,,,2]
-abc[,,,1,5 + 5] <- tmp_all[5,,,,2]
-
-
-tmp <- tmp_all[1,,,,2]
-dim(tmp)
-which(tmp == 1, arr.ind = T)
-apply(abc[,,,,], 4, sum)
-
-RNifti::writeNifti(abc, "tmp2")
-# system("3dcopy /home/subrata/Research/Tensor/MDD/tmp2.nii tmp3")
-```
-CHECK THE TT_N27 map already created using the aforementioned link instead of the file `DemoSubj_SurfVol+tlrc.HEAD` created by you. 
-
-SUMA can also use functions like `3dVol2Surf`, which gives a direct command line mapping from a 3d volume dataset directly into a cortical dataset (Check 43 page onwards of [this pdf](https://afni.nimh.nih.gov/pub/dist/edu/latest/suma/suma.pdf)). Check these later:
+SUMA can also use functions like `3dVol2Surf`, which gives a direct command line mapping from a 3d volume dataset directly into a cortical dataset (Check 43 page onwards of [this pdf](https://afni.nimh.nih.gov/pub/dist/edu/latest/suma/suma.pdf)). 
+Check these later:
 ```
 suma -spec ~/Downloads/suma_demo/SurfData/SUMA/std.DemoSubj_both.spec  -sv anat_final.sub-02 &
 suma -spec ~/CD/suma_demo/SurfData/SUMA/std.DemoSubj_both.spec -sv DemoSubj_SurfVol+orig.BRIK &
 ```
+
+
+# R code to read and write nii file:
+The R code used to create the `all_cases.nii` file: (Now I can't really remember how the first all_case+tlrc.BRIK was created). 
+```R
+library(fmri)
+filename <- paste0("all_case.nii")
+abc <- RNifti::readNifti(filename)
+tmp_all <- readRDS("/mnt/maitra-lab/subrata/MDD/Act_map_perm_group_analysis_added_all.rds")
+dim(tmp_all)
+summary(tmp_all[,,,,1:2])
+dim(abc)
+
+for(ii in 1:5){
+  abc[,,,1,ii]     <- tmp_all[ii,,,,1]
+  abc[,,,1,5 + ii] <- tmp_all[ii,,,,2]
+}
+
+RNifti::writeNifti(abc, "tmp2")
+# system("3dcopy /home/subrata/Research/Tensor/MDD/tmp2.nii tmp3")
+```
+CHECK THE TT_N27 map already created using the aforementioned link instead of the file `DemoSubj_SurfVol+tlrc.HEAD` created by myself. 
+
+
+# Other resources to consider:
+Apart from the wonderful [Andy's book](https://andysbrainbook.readthedocs.io/en/latest/) and [Andy's brain blog](https://www.andysbrainblog.com/), there are many(!?) R packages to help neuroimaging plots. For example, mostly by [John Muschelli](https://github.com/muschellij2)
++ https://github.com/muschellij2/imaging_in_r/tree/gh-pages/pdfs
++ https://github.com/muschellij2/brainR/blob/master/man/write4D.file.Rd
++ https://cran.r-project.org/web/packages/fslr/
+
