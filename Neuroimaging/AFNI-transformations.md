@@ -8,7 +8,7 @@ This file talks about very commonly used neuroimaging views, file formats, templ
   - `+tlrc`: Data transformed into a standardized space (Talairach/MNI).
 + Space (stored in header metadata):
   - **ORIG Space**: Subject’s native anatomical space.
-  - **TLRC Space**: Standardized space (Talairach-Tournoux or MNI).
+  - **TLRC Space**: Standardized space (Talairach-Tournoux (TT_N27) template or MNI).
   
   A dataset with `+orig` can still be **in TLRC space** if it has been transformed but not renamed. To check, use
   ```bash
