@@ -2,7 +2,7 @@ This folder is intended for the use of fMRI and related imaging software, mainly
 
 There are two main software which I've worked with, 
  - easier [FSL](./fsl.md) (Check this [link](https://andysbrainblog.blogspot.com/2012/07/fsl-tutorial-part-1-of-many.html) for more)
- - relatively harder but more flexible [AFNI](./afni.md) (Check this [link](https://andysbrainbook.readthedocs.io/en/latest/AFNI/AFNI_Overview.html))
+ - relatively harder but more flexible [AFNI](./afni.md) (Check this [link](https://andysbrainbook.readthedocs.io/en/latest/AFNI/AFNI_Overview.html) or this [wiki link](https://en.wikibooks.org/wiki/Neuroimaging_Data_Processing/Processing/Steps))
  - apart from the packages in R such as oro.nifti, [fmri](./fmri-R-package.md).
 
 
